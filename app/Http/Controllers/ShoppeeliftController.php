@@ -9,6 +9,7 @@ class ShoppeeliftController extends Controller
 {
     public function index()
     {
+        // Make this DB query instead of eloquent syntax
         // Display 7 items per page custom
         $shoppeelifts = Shoppeelift::paginate(7);
         return view('shoppeelifts.index', compact('shoppeelifts'));
